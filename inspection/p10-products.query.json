@@ -1,0 +1,1 @@
+{"query": "EVALUATE TOPN(30, SUMMARIZECOLUMNS('Products Details'[Product Name], 'Products Details'[Brand Name], 'Products Details'[Products Category], \"Sales\", [Total Sales], \"Profit\", [Total Profit], \"Qty\", SUM('Sales Data'[Quantity]), \"AvgDisc\", AVERAGE('Sales Data'[Discount %])), [Sales], DESC)"}

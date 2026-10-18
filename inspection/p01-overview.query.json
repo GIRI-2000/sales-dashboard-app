@@ -1,0 +1,1 @@
+{"query": "EVALUATE ROW(\"Rows\", COUNTROWS('Sales Data'), \"MinDate\", MIN('Sales Data'[Sales Date]), \"MaxDate\", MAX('Sales Data'[Sales Date]), \"TotalSales\", [Total Sales], \"TotalProfit\", [Total Profit], \"Customers\", [Total Customers])"}

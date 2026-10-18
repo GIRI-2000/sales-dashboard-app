@@ -1,0 +1,11 @@
+EVALUATE
+SUMMARIZECOLUMNS (
+    'Calender'[Month No],
+    'Calender'[Month],
+    TREATAS ( { {{YEAR}} }, 'Calender'[Year] ),
+    "Sales", [Total Sales],
+    "Profit", [Total Profit],
+    "SalesLY", [Sales LY],
+    "Target", [Total Target Sales]
+)
+ORDER BY 'Calender'[Month No]

@@ -1,0 +1,9 @@
+EVALUATE
+SUMMARIZECOLUMNS (
+    'Location Details'[Geographic Region],
+    'Products Details'[Products Category],
+    TREATAS ( { {{YEAR}} }, 'Calender'[Year] ),
+    "Sales", [Total Sales],
+    "Profit", [Total Profit]
+)
+ORDER BY 'Location Details'[Geographic Region], 'Products Details'[Products Category]

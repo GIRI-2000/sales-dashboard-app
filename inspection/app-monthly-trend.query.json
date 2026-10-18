@@ -1,0 +1,1 @@
+{"query": "EVALUATE\nSUMMARIZECOLUMNS (\n    'Calender'[Month No],\n    'Calender'[Month],\n    TREATAS ( { 2020 }, 'Calender'[Year] ),\n    \"Sales\", [Total Sales],\n    \"Profit\", [Total Profit],\n    \"SalesLY\", [Sales LY],\n    \"Target\", [Total Target Sales]\n)\nORDER BY 'Calender'[Month No]\n"}

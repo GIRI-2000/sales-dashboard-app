@@ -1,0 +1,16 @@
+EVALUATE
+TOPN (
+    10,
+    FILTER (
+        SUMMARIZECOLUMNS (
+            'Products Details'[Product Name],
+            'Products Details'[Products Category],
+            TREATAS ( { {{YEAR}} }, 'Calender'[Year] ),
+            "Sales", [Total Sales],
+            "Profit", [Total Profit]
+        ),
+        [Profit] < 0
+    ),
+    [Profit], ASC
+)
+ORDER BY [Profit]

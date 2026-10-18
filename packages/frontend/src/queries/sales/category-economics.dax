@@ -1,0 +1,12 @@
+EVALUATE
+SUMMARIZECOLUMNS (
+    'Products Details'[Products Category],
+    TREATAS ( { {{YEAR}} }, 'Calender'[Year] ),
+    "Sales", [Total Sales],
+    "Cost", [Total Cost],
+    "Profit", [Total Profit],
+    "Qty", SUM ( 'Sales Data'[Quantity] ),
+    "GrossSales", SUM ( 'Sales Data'[Sales Price WO Disc] ),
+    "DiscountAmt", SUM ( 'Sales Data'[Discount] )
+)
+ORDER BY 'Products Details'[Products Category]

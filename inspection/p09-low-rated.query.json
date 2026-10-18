@@ -1,0 +1,1 @@
+{"query": "EVALUATE TOPN(15, FILTER('Sales Data', 'Sales Data'[Customer Rating] <= 2), 'Sales Data'[Sales Date], DESC)"}

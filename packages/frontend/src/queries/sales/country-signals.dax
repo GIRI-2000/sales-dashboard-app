@@ -1,0 +1,13 @@
+EVALUATE
+FILTER (
+    SUMMARIZECOLUMNS (
+        'Location Details'[Country],
+        'Location Details'[Geographic Region],
+        TREATAS ( { {{YEAR}} }, 'Calender'[Year] ),
+        "Sales", [Total Sales],
+        "SalesLY", [Sales LY],
+        "Profit", [Total Profit]
+    ),
+    NOT ISBLANK ( [Sales] ) && NOT ISBLANK ( [SalesLY] ) && [Sales] < [SalesLY]
+)
+ORDER BY [Sales] - [SalesLY]

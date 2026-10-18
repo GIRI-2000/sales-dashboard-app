@@ -1,0 +1,1 @@
+{"query": "EVALUATE SUMMARIZECOLUMNS('Sales Data'[Customer Rating], \"Count\", [Customer Rating Count])"}

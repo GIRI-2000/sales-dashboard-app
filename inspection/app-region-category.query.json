@@ -1,0 +1,1 @@
+{"query": "EVALUATE\nSUMMARIZECOLUMNS (\n    'Location Details'[Geographic Region],\n    'Products Details'[Products Category],\n    TREATAS ( { 2020 }, 'Calender'[Year] ),\n    \"Sales\", [Total Sales],\n    \"Profit\", [Total Profit]\n)\nORDER BY 'Location Details'[Geographic Region], 'Products Details'[Products Category]\n"}

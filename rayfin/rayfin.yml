@@ -1,0 +1,46 @@
+id: sales-dashboard-app
+name: Sales Dashboard App
+version: 1.0.0
+services:
+  connectors:
+    enabled: true
+  auth:
+    enabled: true
+    fabric:
+      enabled: true
+      externalEntraExchange: true
+    password:
+      enabled: false
+    allowedRedirectUris:
+      - http://localhost:5173
+      - http://127.0.0.1:5173
+      - https://great-twist-27fbb5fef0-centralindia.webapp.fabricapps.net
+  data:
+    enabled: true
+    path: packages/data
+    buildCommand: npm run build
+    dialect: mssql
+  staticHosting:
+    enabled: true
+    path: packages/frontend
+    folder: dist
+    buildCommand: npm run build:fabric
+    indexDocument: index.html
+    assetAccess: protected
+    embedded:
+      only: false
+  storage:
+    enabled: false
+  functions:
+    enabled: false
+connectors:
+  - name: salesmodel
+    type: fabric-semanticmodel
+    config:
+      workspaceId: cd7d60eb-cabd-4b8b-af1a-b940f9106c35
+      itemId: 7cfc0163-47d2-4108-81b5-bfc1f5c9b343
+    auth:
+      type: delegated
+    version: "1"
+    operations:
+      - name: executeQuery

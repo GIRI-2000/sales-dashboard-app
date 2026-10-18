@@ -1,0 +1,1 @@
+{"query": "EVALUATE TOPN(40, 'Sales Target', 'Sales Target'[Date], ASC)"}

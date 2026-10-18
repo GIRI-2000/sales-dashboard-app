@@ -1,0 +1,20 @@
+EVALUATE
+SELECTCOLUMNS (
+    TOPN (
+        12,
+        FILTER (
+            'Sales Data',
+            'Sales Data'[Customer Rating] <= 2
+                && YEAR ( 'Sales Data'[Sales Date] ) = {{YEAR}}
+        ),
+        'Sales Data'[Final Sales Price], DESC
+    ),
+    "SalesId", 'Sales Data'[Sales Id],
+    "SalesDate", 'Sales Data'[Sales Date],
+    "Country", 'Sales Data'[Country],
+    "Product", 'Sales Data'[Product Name],
+    "Rating", 'Sales Data'[Customer Rating],
+    "Reason", 'Sales Data'[Complaints Reason],
+    "Amount", 'Sales Data'[Final Sales Price]
+)
+ORDER BY [Amount] DESC

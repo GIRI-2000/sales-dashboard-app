@@ -1,0 +1,1 @@
+{"query": "EVALUATE SUMMARIZECOLUMNS('Location Details'[Geographic Region], 'Location Details'[Country], \"Sales\", [Total Sales], \"Profit\", [Total Profit])"}

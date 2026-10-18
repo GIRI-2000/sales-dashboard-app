@@ -1,0 +1,1 @@
+{"query": "EVALUATE SUMMARIZECOLUMNS('Products Details'[Products Category], 'Products Details'[Product Class], \"Sales\", [Total Sales], \"Cost\", [Total Cost], \"Profit\", [Total Profit], \"Qty\", SUM('Sales Data'[Quantity]))"}

@@ -1,0 +1,1 @@
+{"query": "EVALUATE SUMMARIZECOLUMNS('Calender'[Year], \"Sales\", [Total Sales], \"Cost\", [Total Cost], \"Profit\", [Total Profit], \"ProfitPct\", [Total Profit %], \"SalesLY\", [Sales LY], \"Target\", [Total Target Sales]) ORDER BY 'Calender'[Year]"}
